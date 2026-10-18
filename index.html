@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ─────────────────────────────────────────────────────────────
+     카카오톡·문자 미리보기 설정
+     GitHub Pages 주소 https://guyoun25.github.io/jeju2026/ 기준으로
+     설정되어 있습니다. 저장소 이름을 바꾸면 아래 두 줄도 바꿔야 합니다.
+     preview.png 가 index.html 과 같은 위치에 올라가 있어야 합니다.
+───────────────────────────────────────────────────────────── -->
+<meta property="og:type"        content="website">
+<meta property="og:title"       content="SNU 바이오CEO 28기 · 제주 가을여행">
+<meta property="og:description" content="2026.10.23(금)~25(일) · 2박 3일 · 골프조/여행조 일정과 본인 항공편 안내">
+<meta property="og:image"       content="https://guyoun25.github.io/jeju2026/preview.png">
+<meta property="og:url"         content="https://guyoun25.github.io/jeju2026/">
+<meta name="twitter:card"       content="summary_large_image">
+
+<style>
+  :root{color-scheme:light dark}
+  html,body{margin:0}
+  body{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>28기 제주 가을여행</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F4F1; --surface:#FBFBFA; --surface-2:#EAECE7;
+  --ink:#1B211E; --ink-2:#4A524D; --ink-3:#7B837D;
+  --line:#D9DCD5; --line-strong:#BFC4BB;
+  --golf:#2A6B45; --golf-soft:#E3EEE6; --golf-ink:#1E4F33;
+  --tour:#BD4F2B; --tour-soft:#FAE7DF; --tour-ink:#8F3A1E;
+  --both:#2B4A6F; --both-soft:#E2E9F1; --both-ink:#1F3755;
+  --warn:#9A6B12; --warn-soft:#FAF0DA;
+  --shadow:0 1px 2px rgba(27,33,30,.05), 0 8px 24px -14px rgba(27,33,30,.22);
+  --radius:10px;
+  --sans:"IBM Plex Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --serif:"Gowun Batang","Apple SD Gothic Neo",serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#141816; --surface:#1C211E; --surface-2:#252B27;
+    --ink:#E9ECE7; --ink-2:#B2B9B3; --ink-3:#838B85;
+    --line:#2E352F; --line-strong:#434B44;
+    --golf:#6FB58B; --golf-soft:#1E2F25; --golf-ink:#8FCCA6;
+    --tour:#E08A64; --tour-soft:#33211A; --tour-ink:#EDA585;
+    --both:#8FB4D8; --both-soft:#1B2733; --both-ink:#A9C7E5;
+    --warn:#D7A84A; --warn-soft:#2E2718;
+    --shadow:0 1px 2px rgba(0,0,0,.35), 0 10px 26px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141816; --surface:#1C211E; --surface-2:#252B27;
+  --ink:#E9ECE7; --ink-2:#B2B9B3; --ink-3:#838B85;
+  --line:#2E352F; --line-strong:#434B44;
+  --golf:#6FB58B; --golf-soft:#1E2F25; --golf-ink:#8FCCA6;
+  --tour:#E08A64; --tour-soft:#33211A; --tour-ink:#EDA585;
+  --both:#8FB4D8; --both-soft:#1B2733; --both-ink:#A9C7E5;
+  --warn:#D7A84A; --warn-soft:#2E2718;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 10px 26px -16px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-weight:400; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1040px; margin:0 auto; padding-inline:18px; padding-block:0 72px}
+h1,h2,h3{text-wrap:balance; margin:0}
+.mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ── header ── */
+header{padding-block:40px 24px; border-bottom:1px solid var(--line)}
+.eyebrow{
+  font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:600;
+}
+h1{
+  font-family:var(--serif); font-weight:700; letter-spacing:-.01em;
+  font-size:clamp(30px,6.4vw,46px); line-height:1.12; margin-top:10px;
+}
+.dates{
+  margin-top:12px; color:var(--ink-2); font-size:15px;
+  display:flex; flex-wrap:wrap; gap:6px 16px; align-items:baseline;
+}
+.dates b{font-weight:600; color:var(--ink)}
+.counts{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px}
+.count{
+  display:inline-flex; align-items:baseline; gap:7px;
+  border:1px solid var(--line-strong); border-radius:999px;
+  padding:5px 13px 5px 11px; font-size:13px; background:var(--surface);
+}
+.count i{font-style:normal; width:8px; height:8px; border-radius:50%; align-self:center}
+.count b{font-weight:600}
+.i-golf{background:var(--golf)} .i-tour{background:var(--tour)} .i-both{background:var(--both)}
+
+/* ── my schedule ── */
+.me{margin-top:28px}
+.me h2, .sec h2{
+  font-family:var(--serif); font-weight:700; font-size:21px; letter-spacing:-.01em;
+}
+.hint{color:var(--ink-3); font-size:13.5px; margin-top:4px}
+.names{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px}
+.names button{
+  font-family:var(--sans); font-size:13.5px; font-weight:500; color:var(--ink-2);
+  background:var(--surface); border:1px solid var(--line-strong);
+  border-radius:999px; padding:6px 13px; cursor:pointer;
+  transition:background .12s, color .12s, border-color .12s;
+}
+.names button:hover{border-color:var(--ink-3); color:var(--ink)}
+.names button[aria-pressed="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+.names button.ind{border-style:dashed}
+.names button:focus-visible{outline:2px solid var(--both); outline-offset:2px}
+
+.card{
+  margin-top:16px; background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;
+}
+.card-top{
+  display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px;
+  padding:16px 18px; border-bottom:1px solid var(--line);
+}
+.card-top .who{font-family:var(--serif); font-weight:700; font-size:22px}
+.tag{
+  font-size:12px; font-weight:600; letter-spacing:.02em;
+  padding:3px 10px; border-radius:999px; white-space:nowrap;
+}
+.tag.golf{background:var(--golf-soft); color:var(--golf-ink)}
+.tag.tour{background:var(--tour-soft); color:var(--tour-ink)}
+.tag.both{background:var(--both-soft); color:var(--both-ink)}
+.tag.warn{background:var(--warn-soft); color:var(--warn)}
+.legs{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.leg{padding:15px 18px; border-top:1px solid var(--line)}
+.leg:nth-child(2){border-left:1px solid var(--line)}
+.leg .lbl{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); font-weight:600}
+.leg .flt{margin-top:7px; font-size:16px; font-weight:600}
+.leg .tm{margin-top:3px; font-size:14.5px; color:var(--ink-2)}
+.leg .meta{margin-top:8px; display:flex; flex-wrap:wrap; gap:6px 12px; font-size:13px; color:var(--ink-2)}
+.leg .meta span b{font-weight:600; color:var(--ink)}
+.note{padding:12px 18px; border-top:1px solid var(--line); background:var(--warn-soft);
+      color:var(--warn); font-size:13.5px; font-weight:500}
+@media (max-width:520px){ .leg:nth-child(2){border-left:none} }
+
+/* ── sections ── */
+.sec{margin-top:48px}
+.sec-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 14px; margin-bottom:6px}
+.sec-head .sub{color:var(--ink-3); font-size:13.5px}
+
+/* ── day tabs ── */
+.tabs{
+  display:flex; gap:4px; margin-top:16px; padding:4px;
+  background:var(--surface-2); border-radius:12px; overflow-x:auto;
+}
+.tabs button{
+  flex:1 1 0; min-width:128px; font-family:var(--sans); cursor:pointer;
+  border:none; background:transparent; border-radius:9px; padding:10px 12px;
+  color:var(--ink-2); text-align:center; transition:background .14s, color .14s;
+}
+.tabs button .d{display:block; font-size:15px; font-weight:600; letter-spacing:-.01em}
+.tabs button .n{display:block; font-size:11.5px; color:var(--ink-3); margin-top:2px}
+.tabs button[aria-selected="true"]{background:var(--surface); color:var(--ink); box-shadow:var(--shadow)}
+.tabs button[aria-selected="true"] .n{color:var(--ink-2)}
+.tabs button:focus-visible{outline:2px solid var(--both); outline-offset:-2px}
+
+/* ── timeline ── */
+.lanes{display:grid; grid-template-columns:62px 1fr 1fr; gap:0 12px; margin-top:20px}
+.lane-head{
+  position:sticky; top:0; z-index:2; padding:9px 12px; border-radius:8px 8px 0 0;
+  font-size:13px; font-weight:600; letter-spacing:.01em; text-align:center;
+}
+.lane-head.golf{background:var(--golf-soft); color:var(--golf-ink)}
+.lane-head.tour{background:var(--tour-soft); color:var(--tour-ink)}
+.row{display:contents}
+.t{
+  grid-column:1; font-family:var(--mono); font-variant-numeric:tabular-nums;
+  font-size:12.5px; font-weight:500; color:var(--ink-3);
+  padding:13px 0 0; text-align:right; white-space:nowrap;
+}
+.ev{
+  border:1px solid var(--line); border-left:3px solid var(--line-strong);
+  background:var(--surface); border-radius:3px 8px 8px 3px;
+  padding:11px 13px; margin-top:8px; font-size:14.5px;
+}
+.ev .sub2{display:block; margin-top:3px; font-size:12.5px; color:var(--ink-2); font-weight:400}
+.ev.g{grid-column:2; border-left-color:var(--golf)}
+.ev.v{grid-column:3; border-left-color:var(--tour)}
+.ev.b{grid-column:2 / span 2; border-left-color:var(--both); background:var(--both-soft)}
+.ev.b.plain{background:var(--surface)}
+.ev.tee{background:var(--golf-soft); font-weight:600}
+.ev.alert{grid-column:2 / span 2; border-left-color:var(--warn); background:var(--warn-soft); color:var(--warn); font-weight:500}
+.ev .big{font-weight:600}
+.spacer{grid-column:1 / -1; height:4px}
+@media (max-width:700px){
+  .lanes{grid-template-columns:54px 1fr}
+  .lane-head{display:none}
+  .ev.g, .ev.v, .ev.b, .ev.alert{grid-column:2}
+  .ev.g::before, .ev.v::before{
+    content:attr(data-lane); display:block; font-size:10.5px; font-weight:700;
+    letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px;
+  }
+  .ev.g::before{color:var(--golf)} .ev.v::before{color:var(--tour)}
+}
+
+/* ── golf teams ── */
+.gdays{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:18px}
+.gday{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow)}
+.gday-top{padding:14px 16px; background:var(--golf-soft); border-bottom:1px solid var(--line)}
+.gday-top .dd{font-family:var(--serif); font-weight:700; font-size:18px; color:var(--golf-ink)}
+.gday-top .tee2{margin-top:2px; font-size:13px; color:var(--golf-ink); opacity:.85}
+.gday-top .tee2 .mono{font-weight:600}
+.team{display:flex; gap:10px; padding:11px 16px; border-top:1px solid var(--line); align-items:flex-start}
+.team:first-of-type{border-top:none}
+.team .no{
+  flex:0 0 auto; font-family:var(--mono); font-size:11px; font-weight:600;
+  color:var(--golf); background:var(--golf-soft); border-radius:5px; padding:3px 7px; margin-top:1px;
+}
+.team .mem{display:flex; flex-wrap:wrap; gap:5px}
+.team .mem span{font-size:14px; padding:2px 9px; border:1px solid var(--line-strong); border-radius:999px}
+.team .mem span.ext{border-style:dashed; color:var(--ink-2)}
+
+/* ── table ── */
+.tbl-wrap{overflow-x:auto; margin-top:18px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface)}
+table{border-collapse:collapse; width:100%; min-width:620px; font-size:13.5px}
+th,td{padding:10px 14px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); font-weight:600; background:var(--surface-2); white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.c{white-space:nowrap}
+td .mono{font-size:13px}
+tr.early td{background:var(--warn-soft)}
+tr.early td:first-child{font-weight:600}
+
+.foot{margin-top:52px; padding-top:20px; border-top:1px solid var(--line); color:var(--ink-3); font-size:13px}
+.foot p{margin:0 0 6px}
+@media (prefers-reduced-motion:reduce){*{transition:none !important; animation:none !important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">SNU 바이오CEO 28기</div>
+  <h1>제주 가을여행</h1>
+  <div class="dates">
+    <span><b>2026년 10월 23일(금) ~ 25일(일)</b></span>
+    <span>2박 3일</span>
+    <span>숙소 · 캠퍼트리 호텔&amp;리조트</span>
+  </div>
+  <div class="counts">
+    <span class="count"><i class="i-both"></i>전체 <b>20명</b></span><span class="count"><i class="i-both"></i>단체예약 <b>15명</b> · 개별항공 <b>5명</b></span>
+    <span class="count"><i class="i-golf"></i>골프 <b>23일 11명 · 24일 8명</b></span>
+    <span class="count"><i class="i-tour"></i>여행 <b>23일 5명 · 24일 12명</b></span>
+  </div>
+</header>
+
+<section class="me">
+  <h2>내 일정 보기</h2>
+  <p class="hint">이름을 누르면 조 편성과 항공편이 표시됩니다.</p>
+  <div class="names" id="names"></div>
+  <div id="mecard"></div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <h2>일정표</h2>
+    <span class="sub">골프조 · 여행조 병행 진행</span>
+  </div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="day"></div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <h2>골프 조편성</h2>
+    <span class="sub">10월 18일 확정</span>
+  </div>
+  <div class="gdays" id="golf"></div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <h2>항공편</h2>
+    <span class="sub">공항 이동 차량 기준</span>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>구분</th><th>날짜</th><th>항공편</th><th>시각</th><th>탑승</th></tr></thead>
+      <tbody id="flights"></tbody>
+    </table>
+  </div>
+</section>
+
+<div class="foot">
+  <p><b>*</b> 표시 — 개별 항공예약 (남중혁 · 김현지 · 최진하 · 김호영 · 김민정, 표종옥 님은 귀경편만). 여행자보험 미가입.</p>
+  <p>남중혁 님 10/24 귀경편, 김호영 님 10/25 대구행 편명·시각은 미확보입니다.</p>
+  <p>반정주 님은 10월 18일 일정 취소 — 항공권 취소 처리 중입니다.</p>
+  <p>문의 — 권구연 010-8809-9025</p>
+</div>
+</div>
+
+<script>
+const M = [
+ {n:"박진선", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","49A","DLWT7C"], back:["TW718","10/25 제주 15:15 → 김포 16:30","3F","SJG2NL"]},
+ {n:"한광현", g:[23],    go:["KE1023","10/23 김포 07:20 → 제주 08:35","49F","DLZYFN"], back:["TW718","10/25 제주 15:15 → 김포 16:30","5D","YPQ279"]},
+ {n:"이옥순", g:[],      go:["KE1023","10/23 김포 07:20 → 제주 08:35","49B","DLSAJJ"], back:["TW720","10/25 제주 15:00 → 김포 16:15","4F","D66PS9"]},
+ {n:"최양규", g:[23],    go:["KE1023","10/23 김포 07:20 → 제주 08:35","51F","DLU8MG"], back:["7C120","10/25 제주 13:45 → 김포 15:00","5C","RD3IMJ"], note:"3일차 중식 전 공항 이동 (12:15)"},
+ {n:"이준우", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","50F","5IEJPE"], back:["TW718","10/25 제주 15:15 → 김포 16:30","7F","YPQ279"]},
+ {n:"정우경", g:[],      go:["ZE207","10/23 김포 07:35 → 제주 08:50","4F","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","4F","YPQ279"]},
+ {n:"권구연", g:[],      go:["ZE207","10/23 김포 07:35 → 제주 08:50","3E","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","3E","YPQ279"]},
+ {n:"유신숙", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","8F","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","8F","YPQ279"]},
+ {n:"김희선", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","7D","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","7D","YPQ279"]},
+ {n:"오선영", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","8D","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","8D","YPQ279"]},
+ {n:"최성학", g:[23],    go:["ZE207","10/23 김포 07:35 → 제주 08:50","4A","C4IN5P"],  back:["ZE252","10/25 제주 15:15 → 김포 16:30","4A","C4IN5P"]},
+ {n:"강상욱", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","5C","I8GP5T"],  back:["ZE204","10/25 제주 09:30 → 김포 10:45","3F","I8GP5T"], note:"3일차 일정 불참 · 08:00 공항 이동"},
+ {n:"정지헌", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","48A","DP3YOY"], back:["KE1326","10/24 제주 20:20 → 김포 21:35","42A","DHIVH5"], note:"2일차 석식 불참 · 18:20 공항 이동"},
+ {n:"표종옥", g:[],      go:["7C105","10/24 김포 06:45 → 제주 08:05","3A","NDHPVW"],  back:["제주항공 (개별)","10/25 제주 10:50 → 부산 11:50","—","개별"], note:"2일차부터 합류 · 귀경편 개별 예약(부산행) · 여행자보험 미가입"},
+ {n:"김민걸", g:[],      go:["ZE223","10/23 김포 15:35 → 제주 16:50","2F","ZEBL7U"],  back:["7C114","10/25 제주 11:40 → 김포 12:55","2A","YG9ZYD"], note:"1일차 석식부터 합류 · 3일차 10:10 공항 이동"},
+ {n:"남중혁", ind:1, g:[23,24], go:["KE1023 (개별)","10/23 김포 07:20 → 제주 08:35","—","개별"], back:["개별 예약","10/24 · 편명·시각 미확보","—","개별"], note:"개별 항공예약 · 골프 양일 · 2일차 귀경"},
+ {n:"김현지", ind:1, g:[],      go:["ZE223 (개별)","10/23 김포 15:35 → 제주 16:50","—","개별"], back:["7C114 (개별)","10/25 제주 11:40 → 김포 12:55","—","개별"], note:"개별 항공예약 · 김민걸 님과 동일 일정 · 1일차 석식부터 합류"},
+ {n:"최진하", ind:1, g:[],      go:["KE1045 (개별)","10/24 김포 08:20 출발","—","개별"], back:["TW716 (개별)","10/25 제주 13:40 → 김포 14:55","—","개별"], note:"개별 항공예약 · 2일차부터 합류"},
+ {n:"김호영", ind:1, g:[],      go:["KE1045 (개별)","10/24 김포 08:20 출발","—","개별"], back:["개별 예약","10/25 제주 → 대구 · 시각 미확보","—","개별"], note:"개별 항공예약으로 재합류 · 2일차부터"},
+ {n:"김민정", ind:1, g:[],      go:["ZE219 (개별)","10/24 김포 14:40 출발","—","개별"], back:["TW728 (개별)","10/25 제주 20:30 출발","—","개별"], note:"개별 항공예약 · 2일차 오후부터 합류 · 3일차 늦게 귀경"},
+];
+
+const DAYS = [
+ {key:23, d:"10월 23일", w:"금", n:"1일차 · 16명 · 블랙스톤 11:45 티오프", rows:[
+  ["08:35 / 08:50","b","제주공항 도착","KE1023 08:35 (7명) · ZE207 08:50 (7명) — 조별 차량 분승"],
+  ["09:30","g","블랙스톤 CC 이동","약 50분"],
+  ["09:30","v","비오토피아 방면 이동",""],
+  ["10:30","g","클럽하우스 도착 · 체크인",""],
+  ["11:00","g","클럽하우스 중식","티오프 전"],
+  ["11:45","tee","티오프 — 블랙스톤 골프클럽","3팀 11명"],
+  ["12:00","v","중식 — 비오토피아 레스토랑",""],
+  ["13:30","v","수풍석 박물관","13:30 ~ 14:30 관람"],
+  ["15:00","v","방주교회",""],
+  ["15:40","v","새별오름","억새"],
+  ["16:30","v","오설록 티뮤지엄",""],
+  ["17:00","g","라운딩 종료 · 정리",""],
+  ["17:30","b","블랙스톤 집결 · 두 조 합류",""],
+  ["18:00","b","석식 — 바다마르마레","서귀포시 대정읍 송악관광로411번길 26-8"],
+  ["20:00","b","숙소 입실 — 캠퍼트리",""],
+  ["16:50","alert","김민걸 · 김현지 님 제주 도착 (ZE223)","공항에서 석식 장소로 직접 이동 — 별도 차량 필요"],
+ ]},
+ {key:24, d:"10월 24일", w:"토", n:"2일차 · 20명 · 테디밸리 08:11 티오프", rows:[
+  ["06:00","g","조식 — 숙소","얼리 조식"],
+  ["06:50","g","테디밸리 CC 이동 · 체크인",""],
+  ["07:30","v","조식 — 숙소",""],
+  ["08:11","tee","티오프 — 테디밸리 골프앤리조트","2팀 8명"],
+  ["08:30","v","한림 방면 이동",""],
+  ["09:30","v","한림오일장","4·9일장 — 10월 24일 개장"],
+  ["12:00","v","중식 — 한림오일장 일원",""],
+  ["12:40","g","라운딩 종료 · 클럽하우스 중식",""],
+  ["14:00","b","테디밸리 집결 · 두 조 합류",""],
+  ["14:40","b","카멜리아힐","동백 수목원"],
+  ["16:00","b","삼성혈 · 용두암","16시 해설 예정"],
+  ["18:00","b","석식 — 삼다도횟집","제주시 서해안로 572"],
+  ["20:00","b","숙소 — 캠퍼트리",""],
+  ["08:05","alert","표종옥 님 제주 도착 (7C105)","여행조 합류"],
+  ["09:40","alert","최진하 · 김호영 님 제주 도착 (KE1045 김포 08:20)","개별 항공예약 — 여행조 합류"],
+  ["16:00","alert","김민정 님 제주 도착 (ZE219 김포 14:40)","개별 항공예약 — 오후 일정부터 합류"],
+  ["18:20","alert","정지헌 · 남중혁 님 공항 이동","정지헌 KE1326 20:20 귀경 · 남중혁 개별편 귀경 — 석식 불참"],
+ ]},
+ {key:25, d:"10월 25일", w:"일", n:"3일차 · 18명 · 전원 공통", rows:[
+  ["08:00","bp","조식 · 퇴실 준비",""],
+  ["09:30","bp","퇴실 — 캠퍼트리",""],
+  ["10:00","bp","제주목관아 · 관덕정",""],
+  ["11:20","bp","도두봉",""],
+  ["12:00","bp","이호테우 해변",""],
+  ["12:40","bp","중식 — 김희선 제주몸국",""],
+  ["14:00","bp","제주국제공항 도착 · 수속",""],
+  ["15:15","b","김포행 출발","TW718 8명 · ZE252 1명 → 16:30 김포 도착"],
+  ["20:30","alert","김민정 님 귀경","TW728 제주 20:30 — 종일 일정 참여"],
+  ["조기 출발","alert","먼저 떠나시는 분","강상욱 ZE204 09:30 · 표종옥 부산행 10:50 · 김호영 대구행 · 김민걸·김현지 7C114 11:40 · 최진하 TW716 13:40 · 최양규 7C120 13:45 · 이옥순 TW720 15:00"],
+ ]},
+];
+
+const GOLF = [
+ {d:"10월 23일 (금)", tee:"11:45", sub:"3팀 11명", teams:[
+   ["김희선","유신숙","박진선","오선영"],
+   ["강상욱","이준우","정지헌","최성학"],
+   ["남중혁*","최양규","한광현"]]},
+ {d:"10월 24일 (토)", tee:"08:11", sub:"2팀 8명", teams:[
+   ["김희선","유신숙","박진선","오선영"],
+   ["강상욱","남중혁*","이준우","정지헌"]]},
+];
+
+const FLIGHTS = [
+ ["도착","10/23 (금)","대한항공 KE1023","김포 07:20 → 제주 08:35","박진선 · 한광현 · 이옥순 · 최양규 · 정지헌 · 이준우 · 남중혁* (7명)",0],
+ ["도착","10/23 (금)","이스타항공 ZE207","김포 07:35 → 제주 08:50","유신숙 · 김희선 · 오선영 · 강상욱 · 최성학 · 정우경 · 권구연 (7명)",0],
+ ["도착","10/23 (금)","이스타항공 ZE223","김포 15:35 → 제주 16:50","김민걸 · 김현지* — 석식 장소로 직접 이동",1],
+ ["도착","10/24 (토)","제주항공 7C105","김포 06:45 → 제주 08:05","표종옥 — 여행조 합류",1],
+ ["도착","10/24 (토)","대한항공 KE1045","김포 08:20 출발","최진하* · 김호영* — 여행조 합류",1],
+ ["도착","10/24 (토)","이스타항공 ZE219","김포 14:40 출발","김민정* — 오후 일정부터 합류",1],
+ ["출발","10/24 (토)","대한항공 KE1326","제주 20:20 → 김포 21:35","정지헌 — 18:20 공항 이동",1],
+ ["출발","10/24 (토)","개별 예약","편명·시각 미확보","남중혁* — 확인 필요",1],
+ ["출발","10/25 (일)","이스타항공 ZE204","제주 09:30 → 김포 10:45","강상욱 — 08:00 공항 · 3일차 일정 불참",1],
+ ["출발","10/25 (일)","제주항공","제주 10:50 → 부산 11:50","표종옥* — 부산행",1],
+ ["출발","10/25 (일)","개별 예약","제주 → 대구 · 시각 미확보","김호영* — 확인 필요",1],
+ ["출발","10/25 (일)","제주항공 7C114","제주 11:40 → 김포 12:55","김민걸 · 김현지* — 10:10 공항",1],
+ ["출발","10/25 (일)","티웨이항공 TW716","제주 13:40 → 김포 14:55","최진하* — 12:10 공항",1],
+ ["출발","10/25 (일)","제주항공 7C120","제주 13:45 → 김포 15:00","최양규 — 12:15 공항 · 중식 전 이탈",1],
+ ["출발","10/25 (일)","티웨이항공 TW720","제주 15:00 → 김포 16:15","이옥순",0],
+ ["출발","10/25 (일)","이스타항공 ZE252","제주 15:15 → 김포 16:30","최성학",0],
+ ["출발","10/25 (일)","티웨이항공 TW718","제주 15:15 → 김포 16:30","박진선 · 한광현 · 정우경 · 이준우 · 권구연 · 유신숙 · 김희선 · 오선영 (8명)",0],
+ ["출발","10/25 (일)","티웨이항공 TW728","제주 20:30 출발","김민정* — 종일 일정 참여",1],
+];
+
+const esc = s => String(s).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+/* ── 이름 선택 ── */
+const namesEl = document.getElementById("names");
+const meEl = document.getElementById("mecard");
+let picked = null;
+try { picked = localStorage.getItem("jeju-me"); } catch (e) {}
+
+M.forEach(m => {
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = m.n; b.id = "nm-" + m.n;
+  if (m.ind) b.className = "ind";
+  b.setAttribute("aria-pressed", "false");
+  b.onclick = () => select(m.n === picked ? null : m.n);
+  namesEl.appendChild(b);
+});
+
+function groupTags(m){
+  const t = [];
+  if (m.g.length === 2) t.push(['golf','⛳ 골프 — 23 · 24일 양일']);
+  else if (m.g.length === 1) t.push(['golf','⛳ 골프 — ' + m.g[0] + '일']);
+  if (m.g.length < 2) t.push(['tour','🚌 여행 — ' + (m.g.length ? (m.g[0] === 23 ? '24일' : '23일') : '23 · 24일')]);
+  return t;
+}
+
+function select(n){
+  picked = n;
+  try { n ? localStorage.setItem("jeju-me", n) : localStorage.removeItem("jeju-me"); } catch (e) {}
+  M.forEach(m => {
+    const b = document.getElementById("nm-" + m.n);
+    if (b) b.setAttribute("aria-pressed", String(m.n === n));
+  });
+  if (!n) { meEl.innerHTML = ""; return; }
+  const m = M.find(x => x.n === n);
+  let tags = groupTags(m).map(([c, s]) => `<span class="tag ${c}">${esc(s)}</span>`).join("");
+  if (m.ind) tags += `<span class="tag warn">개별 항공예약</span>`;
+  const leg = (l, d) => `<div class="leg">
+      <div class="lbl">${l}</div>
+      <div class="flt">${esc(d[0])}</div>
+      <div class="tm mono">${esc(d[1])}</div>
+      <div class="meta">${d[2] === "—" ? `<span>본인 예약 — 좌석·예약번호 미수집</span>` : `<span>좌석 <b>${esc(d[2])}</b></span><span>예약번호 <b class="mono">${esc(d[3])}</b></span>`}</div>
+    </div>`;
+  meEl.innerHTML = `<div class="card">
+      <div class="card-top"><span class="who">${esc(m.n)}</span>${tags}</div>
+      <div class="legs">${leg("가는편", m.go)}${leg("오는편", m.back)}</div>
+      ${m.note ? `<div class="note">${esc(m.note)}</div>` : ""}
+    </div>`;
+}
+
+/* ── 일정 탭 ── */
+const tabsEl = document.getElementById("tabs");
+const dayEl = document.getElementById("day");
+DAYS.forEach((d, i) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.role = "tab"; b.id = "tab-" + d.key;
+  b.innerHTML = `<span class="d">${d.d} <span style="font-weight:400">(${d.w})</span></span><span class="n">${esc(d.n)}</span>`;
+  b.onclick = () => showDay(i);
+  tabsEl.appendChild(b);
+});
+
+function showDay(i){
+  DAYS.forEach((d, j) => {
+    const b = document.getElementById("tab-" + d.key);
+    if (b) b.setAttribute("aria-selected", String(i === j));
+  });
+  const d = DAYS[i];
+  const cls = { g:"g", v:"v", b:"b", bp:"b plain", tee:"g tee", alert:"alert" };
+  const lane = { g:"골프조", v:"여행조", tee:"골프조" };
+  let html = '<div class="lanes">';
+  if (d.key !== 25) {
+    html += '<div></div><div class="lane-head golf">⛳ 골프조</div><div class="lane-head tour">🚌 여행조</div>';
+  }
+  d.rows.forEach(([t, k, main, sub]) => {
+    const la = lane[k] ? ` data-lane="${lane[k]}"` : "";
+    html += `<div class="t">${esc(t)}</div><div class="ev ${cls[k]}"${la}>`
+         +  `<span class="big">${esc(main)}</span>`
+         +  (sub ? `<span class="sub2">${esc(sub)}</span>` : "")
+         +  `</div>`;
+    if (k !== "g" && k !== "v" && k !== "tee") html += '<div class="spacer"></div>';
+  });
+  dayEl.innerHTML = html + "</div>";
+}
+
+/* ── 골프 조편성 ── */
+document.getElementById("golf").innerHTML = GOLF.map(d => `
+  <div class="gday">
+    <div class="gday-top">
+      <div class="dd">${esc(d.d)}</div>
+      <div class="tee2">티오프 <span class="mono">${esc(d.tee)}</span> · ${esc(d.sub)}</div>
+    </div>
+    ${d.teams.map((t, i) => `<div class="team"><span class="no">${i + 1}팀</span>
+      <span class="mem">${t.map(p => `<span class="${p.endsWith("*") ? "ext" : ""}">${esc(p.replace("*", ""))}</span>`).join("")}</span></div>`).join("")}
+  </div>`).join("")
+  + `<p class="hint" style="grid-column:1/-1;margin:0">점선 표시 — 남중혁 님은 개별 항공예약 참석자입니다. 공지문의 ‘류신숙’은 항공권·보험 모두 ‘유신숙’으로 발권되어 있습니다.</p>`;
+
+/* ── 항공편 ── */
+document.getElementById("flights").innerHTML = FLIGHTS.map(f => `
+  <tr class="${f[5] ? "early" : ""}">
+    <td class="c">${esc(f[0])}</td><td class="c mono">${esc(f[1])}</td>
+    <td class="c">${esc(f[2])}</td><td class="c mono">${esc(f[3])}</td><td>${esc(f[4])}</td>
+  </tr>`).join("");
+
+showDay(0);
+if (picked && M.some(m => m.n === picked)) select(picked); else picked = null;
+</script>
+
+</body>
+</html>
