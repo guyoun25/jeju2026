@@ -6,7 +6,7 @@
 
 <meta property="og:type"        content="website">
 <meta property="og:title"       content="SNU 바이오CEO 28기 · 제주 가을여행">
-<meta property="og:description" content="2026.10.23(금)~25(일) · 2박 3일 · 골프조/여행조 일정과 본인 항공편 안내">
+<meta property="og:description" content="2026.10.23(금)~25(일) · 2박 3일 · 골프조/여행조 일정, 숙소 배정, 본인 항공편 안내">
 <meta property="og:image"       content="https://guyoun25.github.io/jeju2026/preview.png">
 <meta property="og:url"         content="https://guyoun25.github.io/jeju2026/">
 <meta name="twitter:card"       content="summary_large_image">
@@ -201,6 +201,24 @@ h1{
   .ev.g::before{color:var(--golf)} .ev.v::before{color:var(--tour)}
 }
 
+/* ── rooms ── */
+.rooms{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px; margin-top:18px}
+.rnight{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
+.rnight-top{padding:13px 16px; background:var(--both-soft); border-bottom:1px solid var(--line)}
+.rnight-top .dd{font-family:var(--serif); font-weight:700; font-size:17px; color:var(--both-ink)}
+.rnight-top .sub2{margin-top:2px; font-size:12.5px; color:var(--both-ink); opacity:.85}
+.rrow{display:flex; gap:10px; padding:9px 16px; border-top:1px solid var(--line); align-items:center}
+.rrow:first-of-type{border-top:none}
+.rrow .rno{
+  flex:0 0 38px; font-family:var(--mono); font-size:11.5px; font-weight:600;
+  text-align:center; border-radius:5px; padding:3px 0;
+}
+.rrow.m .rno{color:var(--both-ink); background:var(--both-soft)}
+.rrow.f .rno{color:var(--tour-ink); background:var(--tour-soft)}
+.rrow .who2{display:flex; flex-wrap:wrap; gap:5px}
+.rrow .who2 span{font-size:14px; padding:2px 9px; border:1px solid var(--line-strong); border-radius:999px}
+.rrow .who2 span.only{border-style:dashed; color:var(--ink-2)}
+
 /* ── golf teams ── */
 .gdays{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:18px}
 .gday{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow)}
@@ -269,6 +287,14 @@ tr.early td:first-child{font-weight:600}
 
 <section class="sec">
   <div class="sec-head">
+    <h2>숙소 배정</h2>
+    <span class="sub">캠퍼트리 호텔&amp;리조트 · 2인 1실 · 호실은 체크인 시 배정</span>
+  </div>
+  <div class="rooms" id="rooms"></div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
     <h2>골프 조편성</h2>
     <span class="sub">10월 18일 확정</span>
   </div>
@@ -298,26 +324,26 @@ tr.early td:first-child{font-weight:600}
 
 <script>
 const M = [
- {n:"박진선", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","49A","DLWT7C"], back:["TW718","10/25 제주 15:15 → 김포 16:30","3F","SJG2NL"]},
- {n:"한광현", g:[23],    go:["KE1023","10/23 김포 07:20 → 제주 08:35","49F","DLZYFN"], back:["TW718","10/25 제주 15:15 → 김포 16:30","5D","YPQ279"]},
- {n:"이옥순", g:[],      go:["KE1023","10/23 김포 07:20 → 제주 08:35","49B","DLSAJJ"], back:["TW720","10/25 제주 15:00 → 김포 16:15","4F","D66PS9"]},
- {n:"최양규", g:[23],    go:["KE1023","10/23 김포 07:20 → 제주 08:35","51F","DLU8MG"], back:["7C104","10/25 제주 08:40 → 김포 09:55","6F","MFBVKD"], note:"★10-18 오는편 변경 (7C120 13:45 → 7C104 08:40) · 3일차 일정 불참 · 07:10 공항 이동"},
- {n:"이준우", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","50F","5IEJPE"], back:["TW718","10/25 제주 15:15 → 김포 16:30","7F","YPQ279"]},
- {n:"정우경", g:[],      go:["ZE207","10/23 김포 07:35 → 제주 08:50","4F","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","4F","YPQ279"]},
- {n:"권구연", g:[],      go:["ZE207","10/23 김포 07:35 → 제주 08:50","3E","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","3E","YPQ279"]},
- {n:"유신숙", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","8F","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","8F","YPQ279"]},
- {n:"김희선", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","7D","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","7D","YPQ279"]},
- {n:"오선영", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","8D","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","8D","YPQ279"]},
- {n:"최성학", g:[23],    go:["ZE207","10/23 김포 07:35 → 제주 08:50","4A","C4IN5P"],  back:["ZE252","10/25 제주 15:15 → 김포 16:30","4A","C4IN5P"]},
- {n:"강상욱", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","5C","I8GP5T"],  back:["ZE204","10/25 제주 09:30 → 김포 10:45","3F","I8GP5T"], note:"3일차 일정 불참 · 08:00 공항 이동"},
- {n:"정지헌", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","48A","DP3YOY"], back:["KE1326","10/24 제주 20:20 → 김포 21:35","42A","DHIVH5"], note:"2일차 석식 불참 · 18:20 공항 이동"},
- {n:"표종옥", g:[],      go:["7C105","10/24 김포 06:45 → 제주 08:05","3A","NDHPVW"],  back:["제주항공 (개별)","10/25 제주 10:50 → 부산 11:50","—","개별"], note:"2일차부터 합류 · 귀경편 개별 예약(부산행) · 여행자보험 미가입"},
- {n:"김민걸", g:[],      go:["ZE223","10/23 김포 15:35 → 제주 16:50","2F","ZEBL7U"],  back:["7C114","10/25 제주 11:40 → 김포 12:55","2A","YG9ZYD"], note:"1일차 석식부터 합류 · 3일차 10:10 공항 이동"},
- {n:"남중혁", ind:1, g:[23,24], go:["KE1023 (개별)","10/23 김포 07:20 → 제주 08:35","—","개별"], back:["개별 예약","10/24 · 편명·시각 미확보","—","개별"], note:"개별 항공예약 · 골프 양일 · 2일차 귀경"},
- {n:"김현지", ind:1, g:[],      go:["ZE223 (개별)","10/23 김포 15:35 → 제주 16:50","—","개별"], back:["7C114 (개별)","10/25 제주 11:40 → 김포 12:55","—","개별"], note:"개별 항공예약 · 김민걸 님과 동일 일정 · 1일차 석식부터 합류"},
- {n:"최진하", ind:1, g:[],      go:["KE1045 (개별)","10/24 김포 08:20 출발","—","개별"], back:["TW716 (개별)","10/25 제주 13:40 → 김포 14:55","—","개별"], note:"개별 항공예약 · 2일차부터 합류"},
- {n:"김호영", ind:1, g:[],      go:["OZ8927 아시아나 (개별)","10/24 김포 08:25 → 제주 09:40","—","EJTMV4"], back:["LJ7572 진에어 (개별)","10/25 제주 07:05 → 대구 08:10","—","BEB83Y"], note:"개별 항공예약으로 재합류 · 2일차부터 · 3일차 일정 불참 (05:40 공항 이동)"},
- {n:"김민정", ind:1, g:[],      go:["ZE219 (개별)","10/24 김포 14:40 출발","—","개별"], back:["TW728 (개별)","10/25 제주 20:30 출발","—","개별"], note:"개별 항공예약 · 2일차 오후부터 합류 · 3일차 늦게 귀경"},
+ {n:"박진선", room:"F3 · 양일", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","49A","DLWT7C"], back:["TW718","10/25 제주 15:15 → 김포 16:30","3F","SJG2NL"]},
+ {n:"한광현", room:"M2 · 양일", g:[23],    go:["KE1023","10/23 김포 07:20 → 제주 08:35","49F","DLZYFN"], back:["TW718","10/25 제주 15:15 → 김포 16:30","5D","YPQ279"]},
+ {n:"이옥순", room:"F4 · 양일", g:[],      go:["KE1023","10/23 김포 07:20 → 제주 08:35","49B","DLSAJJ"], back:["TW720","10/25 제주 15:00 → 김포 16:15","4F","D66PS9"]},
+ {n:"최양규", room:"M2 · 양일", g:[23],    go:["KE1023","10/23 김포 07:20 → 제주 08:35","51F","DLU8MG"], back:["7C104","10/25 제주 08:40 → 김포 09:55","6F","MFBVKD"], note:"★10-18 오는편 변경 (7C120 13:45 → 7C104 08:40) · 3일차 일정 불참 · 07:10 공항 이동"},
+ {n:"이준우", room:"M3 · 양일", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","50F","5IEJPE"], back:["TW718","10/25 제주 15:15 → 김포 16:30","7F","YPQ279"]},
+ {n:"정우경", room:"F4 · 양일", g:[],      go:["ZE207","10/23 김포 07:35 → 제주 08:50","4F","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","4F","YPQ279"]},
+ {n:"권구연", room:"F1 · 양일", g:[],      go:["ZE207","10/23 김포 07:35 → 제주 08:50","3E","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","3E","YPQ279"]},
+ {n:"유신숙", room:"F3 · 양일", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","8F","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","8F","YPQ279"]},
+ {n:"김희선", room:"F2 · 양일", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","7D","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","7D","YPQ279"]},
+ {n:"오선영", room:"F2 · 양일", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","8D","I5GUYC"],  back:["TW718","10/25 제주 15:15 → 김포 16:30","8D","YPQ279"]},
+ {n:"최성학", room:"M3 · 양일", g:[23],    go:["ZE207","10/23 김포 07:35 → 제주 08:50","4A","C4IN5P"],  back:["ZE252","10/25 제주 15:15 → 김포 16:30","4A","C4IN5P"]},
+ {n:"강상욱", room:"M1 · 양일", g:[23,24], go:["ZE207","10/23 김포 07:35 → 제주 08:50","5C","I8GP5T"],  back:["ZE204","10/25 제주 09:30 → 김포 10:45","3F","I8GP5T"], note:"3일차 일정 불참 · 08:00 공항 이동"},
+ {n:"정지헌", room:"M4 · 23일만", g:[23,24], go:["KE1023","10/23 김포 07:20 → 제주 08:35","48A","DP3YOY"], back:["KE1326","10/24 제주 20:20 → 김포 21:35","42A","DHIVH5"], note:"2일차 석식 불참 · 18:20 공항 이동"},
+ {n:"표종옥", room:"F5 · 24일만", g:[],      go:["7C105","10/24 김포 06:45 → 제주 08:05","3A","NDHPVW"],  back:["제주항공 (개별)","10/25 제주 10:50 → 부산 11:50","—","개별"], note:"2일차부터 합류 · 귀경편 개별 예약(부산행) · 여행자보험 미가입"},
+ {n:"김민걸", room:"M1 · 양일", g:[],      go:["ZE223","10/23 김포 15:35 → 제주 16:50","2F","ZEBL7U"],  back:["7C114","10/25 제주 11:40 → 김포 12:55","2A","YG9ZYD"], note:"1일차 석식부터 합류 · 3일차 10:10 공항 이동"},
+ {n:"남중혁", room:"M4 · 23일만", ind:1, g:[23,24], go:["KE1023 (개별)","10/23 김포 07:20 → 제주 08:35","—","개별"], back:["개별 예약","10/24 · 편명·시각 미확보","—","개별"], note:"개별 항공예약 · 골프 양일 · 2일차 귀경"},
+ {n:"김현지", room:"F1 · 양일", ind:1, g:[],      go:["ZE223 (개별)","10/23 김포 15:35 → 제주 16:50","—","개별"], back:["7C114 (개별)","10/25 제주 11:40 → 김포 12:55","—","개별"], note:"개별 항공예약 · 김민걸 님과 동일 일정 · 1일차 석식부터 합류"},
+ {n:"최진하", room:"M4 · 24일만", ind:1, g:[],      go:["KE1045 (개별)","10/24 김포 08:20 출발","—","개별"], back:["TW716 (개별)","10/25 제주 13:40 → 김포 14:55","—","개별"], note:"개별 항공예약 · 2일차부터 합류"},
+ {n:"김호영", room:"M4 · 24일만", ind:1, g:[],      go:["OZ8927 아시아나 (개별)","10/24 김포 08:25 → 제주 09:40","—","EJTMV4"], back:["LJ7572 진에어 (개별)","10/25 제주 07:05 → 대구 08:10","—","BEB83Y"], note:"개별 항공예약으로 재합류 · 2일차부터 · 3일차 일정 불참 (05:40 공항 이동)"},
+ {n:"김민정", room:"F5 · 24일만", ind:1, g:[],      go:["ZE219 (개별)","10/24 김포 14:40 출발","—","개별"], back:["TW728 (개별)","10/25 제주 20:30 출발","—","개별"], note:"개별 항공예약 · 2일차 오후부터 합류 · 3일차 늦게 귀경"},
 ];
 
 const DAYS = [
@@ -439,6 +465,7 @@ function select(n){
   if (!n) { meEl.innerHTML = ""; return; }
   const m = M.find(x => x.n === n);
   let tags = groupTags(m).map(([c, s]) => `<span class="tag ${c}">${esc(s)}</span>`).join("");
+  if (m.room) tags += `<span class="tag both">🏨 숙소 ${esc(m.room)}</span>`;
   if (m.ind) tags += `<span class="tag warn">개별 항공예약</span>`;
   const leg = (l, d) => `<div class="leg">
       <div class="lbl">${l}</div>
@@ -486,6 +513,29 @@ function showDay(i){
   });
   dayEl.innerHTML = html + "</div>";
 }
+
+/* ── 숙소 배정 ── */
+const ROOMS = [
+ {d:"10월 23일 (금)", n:"16명 · 8실", rooms:[
+   ["M1","강상욱","김민걸"],["M2","최양규","한광현"],["M3","최성학","이준우"],["M4","남중혁*","정지헌*"],
+   ["F1","권구연","김현지"],["F2","김희선","오선영"],["F3","박진선","유신숙"],["F4","이옥순","정우경"]]},
+ {d:"10월 24일 (토)", n:"18명 · 9실", rooms:[
+   ["M1","강상욱","김민걸"],["M2","최양규","한광현"],["M3","최성학","이준우"],["M4","김호영*","최진하*"],
+   ["F1","권구연","김현지"],["F2","김희선","오선영"],["F3","박진선","유신숙"],["F4","이옥순","정우경"],
+   ["F5","김민정*","표종옥*"]]},
+];
+document.getElementById("rooms").innerHTML = ROOMS.map(d => `
+  <div class="rnight">
+    <div class="rnight-top">
+      <div class="dd">${esc(d.d)} 숙박</div>
+      <div class="sub2">${esc(d.n)}</div>
+    </div>
+    ${d.rooms.map(([no, a, b]) => `<div class="rrow ${no[0].toLowerCase()}">
+      <span class="rno">${esc(no)}</span>
+      <span class="who2">${[a, b].map(p => `<span class="${p.endsWith("*") ? "only" : ""}">${esc(p.replace("*", ""))}</span>`).join("")}</span>
+    </div>`).join("")}
+  </div>`).join("")
+  + `<p class="hint" style="grid-column:1/-1;margin:0">점선 표시 — 해당 날짜만 숙박하시는 분입니다. M4는 23일 남중혁·정지헌 님이 쓰신 뒤 24일 김호영·최진하 님이 이어서 사용합니다. 호실 번호는 체크인 시 배정됩니다.</p>`;
 
 /* ── 골프 조편성 ── */
 document.getElementById("golf").innerHTML = GOLF.map(d => `
